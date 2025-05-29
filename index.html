@@ -152,7 +152,7 @@
         }
 
         /* Scrollable container for Selected Items */
-        #selectedItemsListContainer {
+        .selectedItemsListContainer {
             min-height: 60vh;
             /* Minimum height for scrollability */
             max-height: 60vh;
@@ -169,21 +169,21 @@
         }
 
         /* Scrollbar styling for Selected Items (Webkit browsers) */
-        #selectedItemsListContainer::-webkit-scrollbar {
+        .selectedItemsListContainer::-webkit-scrollbar {
             width: 8px;
         }
 
-        #selectedItemsListContainer::-webkit-scrollbar-track {
+        .selectedItemsListContainer::-webkit-scrollbar-track {
             background: #f1f1f1;
             border-radius: 10px;
         }
 
-        #selectedItemsListContainer::-webkit-scrollbar-thumb {
+        .selectedItemsListContainer::-webkit-scrollbar-thumb {
             background: #888;
             border-radius: 10px;
         }
 
-        #selectedItemsListContainer::-webkit-scrollbar-thumb:hover {
+        .selectedItemsListContainer::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
 
@@ -210,11 +210,27 @@
             font-size: 0.9rem;
             color: #555;
         }
+
+        @media (max-width:768px) {
+
+            .selectedItemsListContainer,
+            #itemListContainer {
+                max-height: 45dvh;
+                min-height: 45dvh;
+                margin-bottom: 15px;
+
+            }
+
+            #itemListContainer {
+                margin-right: 0;
+            }
+
+        }
     </style>
 </head>
 
-<body style="max-height: 100dvh; height: 100vh;">
-    <div class="container-fluid py-md-3" style="max-height: 100vh;">
+<body style="max-height: 100dvh;">
+    <div class="container-fluid py-md-3">
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center">Shipping Inventory</h1>
@@ -234,7 +250,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="card">
+                <div class="card selectedItemsListContainer">
                     <div class="card-body">
                         <h6 class="mb-0">Selected Items</h6>
                         <div id="selectedItemsListContainer">
