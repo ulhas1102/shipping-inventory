@@ -211,11 +211,25 @@
             color: #555;
         }
 
+        .brand-logo {
+            aspect-ratio: 6/1;
+            object-fit: fill;
+            width: 200px;
+            text-align: center;
+            margin: 5px auto 10px;
+
+        }
+
         @media (max-width:768px) {
+            .brand-logo {
+
+                width: 150px;
+                margin: 5px auto 7px;
+            }
 
             .nav-scrollable .nav-link {
                 padding: 0.3rem 1rem;
-                
+
             }
 
             #itemListContainer {
@@ -226,9 +240,9 @@
             }
 
             .selectedItemsListContainer {
-                max-height:37dvh;
+                max-height: 37dvh;
                 min-height: 37dvh;
-                margin-bottom:10px;
+                margin-bottom: 10px;
             }
 
             #itemListContainer {
@@ -242,8 +256,9 @@
 <body style="max-height: 100dvh;">
     <div class="container-fluid py-md-3">
         <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">Shipping Inventory</h1>
+            <div class="col-12 text-center">
+                <img src="https://www.pathwaymovers.com.au/wp-content/uploads/2025/05/pathway-movers-logo.png"
+                    alt=" brand logo" class="img-fluid brand-logo">
             </div>
             <div class="col-12">
                 <nav class="nav nav-pills nav-scrollable" id="categoryNav">
